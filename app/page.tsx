@@ -46,6 +46,7 @@ export default function Main() {
       ) : activePopUpNumber === 'aliveStatistics' ? (
         <DiagramPopUp setActivePopUpNumber={setActivePopUpNumber} {...arrInfoPopUp[1]} />
       ) : null}
+      {activePopUpNumber && <div className='background-popup'></div>}
       <div className='main-wrapper'>
         <Image src={imageBlue} alt='Нажать' className='blue-line' />
         <div className='section-wrapper'>

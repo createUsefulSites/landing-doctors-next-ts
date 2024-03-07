@@ -32,22 +32,18 @@ export default function DiagramPopUp({
     Array.from(document.getElementsByClassName('popup-text')!).forEach((element, index) => {
       element.innerHTML = text[index];
     });
-    Array.from(document.querySelectorAll('.main-wrapper')).forEach((item) =>
-      item.addEventListener('click', closePopUp),
-    );
+    document.querySelector('.background-popup')!.addEventListener('click', closePopUp);
     setTimeout(() => popUpRef.current && (popUpRef.current.style.opacity = '1'), 0);
-
-    return () => {
-      Array.from(document.querySelectorAll('.main-wrapper')).forEach((item) =>
-        item.addEventListener('click', closePopUp),
-      );
-    };
   }, []);
 
   function closePopUp(): void {
-    popUpRef.current && (popUpRef.current.style.display = 'none');
     document.body.style.overflow = 'auto';
-    setActivePopUpNumber(null);
+    popUpRef.current!.style.opacity = '0';
+    document.querySelector('.background-popup')!.removeEventListener('click', closePopUp);
+    setTimeout(() => {
+      setActivePopUpNumber(null);
+      popUpRef.current!.style.display = 'none';
+    }, 210);
   }
 
   const arrInfo: Array<propsForPopUp> = [

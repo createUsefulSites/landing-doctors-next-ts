@@ -1,3 +1,4 @@
+Сайт: https://landing-doctors-next-ts.netlify.app/
 Next JS + TypeScript лендинг-приложение с кликабельными секциями
 
 ## Getting Started

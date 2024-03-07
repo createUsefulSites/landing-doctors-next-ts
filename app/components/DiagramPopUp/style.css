@@ -14,7 +14,7 @@
   background-color: white;
   box-shadow: 0 0 25px rgb(142, 160, 173, 0.35);
 
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.21s ease-in;
 }
 
 .popup-text {
