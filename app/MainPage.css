@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('./../public/fonts/ofont.ru_CenturyGothic.ttf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+.main-wrapper {
+  position: relative;
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.section-wrapper {
+  margin: 0 auto;
+  width: 1290px;
+  min-height: 110px;
+}
+
+.blue-line {
+  content: '';
+  background: url(./../public/graphics/blue_line.svg) no-repeat;
+  max-width: 1380px;
+  height: 110px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.header-info {
+  font-family: 'Century Gothic';
+  font-weight: bold;
+  line-height: 50px;
+  font-size: 40px;
+  margin-bottom: 80px;
+}
+
+/* Кликабельные секции */
+
+.header-articles-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+}
+
+.header-article {
+  position: relative;
+  display: flex;
+  padding: 40px 45px;
+  border: 1px solid #01457a;
+  font-size: 24px;
+  column-gap: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgb(142, 160, 173, 0.35);
+  cursor: pointer;
+}
+
+.hand-click {
+  position: absolute;
+  left: calc(100% - 25px);
+  top: -25px;
+  background: url(./../public/graphics/blue_hand.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+.green-hand::after {
+  background: url(./../public/graphics/green_hand.svg) no-repeat;
+}
+
+.header-article-image {
+  align-self: flex-start;
+}
+
+.header-article__main-text {
+  padding-top: 5px;
+  width: 295px;
+  height: 115px;
+  background: url(./../public/graphics/blue_arrow_back.svg) bottom no-repeat;
+}
+
+.header-article__info {
+  position: relative;
+  max-width: 760px;
+}
+
+.header-article__info::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  background: url(./../public/graphics/smoke.svg);
+  left: 0;
+  bottom: 0;
+}
+
+/* Нижняя часть */
+
+.bottom-header {
+  width: 100%;
+  border-radius: 20px;
+  font-size: 28px;
+  padding: 22px 80px;
+  text-align: center;
+  background: linear-gradient(to right, #fdd966 0%, #bcd77e 75%);
+  margin-bottom: 40px;
+}
+
+/* Карточки внизу страницы */
+
+.bottom-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 60px;
+}
+
+.bottom-section__header {
+  font-size: 24px;
+}
+
+.bottom-articles__wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+/* стили карточки внизу страницы */
+
+.bottom-article {
+  position: relative;
+  box-shadow: 0 0 25px rgb(142, 160, 173, 0.35);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 15px;
+  background: linear-gradient(90deg, #fbfdff, #d8efff);
+  border-radius: 20px;
+  width: 410px;
+}
+
+.bottom-article__header {
+  font-size: 28px;
+}
+
+.bottom-article:nth-child(2) > .bottom-article__header {
+  max-width: 260px;
+}
+
+.bottom-article__info {
+  font-size: 24px;
+}
+
+sup {
+  font-size: 18px;
+}
+
+.bottom-advice__wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+.bottom-advice__card {
+  font-size: 24px;
+  padding: 30px 40px;
+  max-width: 630px;
+  background: linear-gradient(90deg, #fbfdff, #d8efff);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgb(142, 160, 173, 0.35);
+}
+
+.union_arrow-left,
+.union_arrow-right {
+  position: absolute;
+  bottom: -9%;
+  left: -55%;
+}
+
+.union_arrow-right {
+  left: 55%;
+}
+
+@media screen and (min-width: 1355px) {
+  .blue-line {
+    left: calc((100vw - 1355px) / 2 - 57px);
+  }
+}
